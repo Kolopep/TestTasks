@@ -1,0 +1,84 @@
+﻿<Page x:Class="TestTaskApp.Pages.SQLRequestsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestTaskApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SQLRequestsPage">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="60"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="BBack" Click="BBack_Click" Content="Back" Width="100" HorizontalAlignment="Left" Margin="5"/>
+        <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskOne" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding FullName}" Header="Full Name"/>
+                <DataGridTextColumn Binding="{Binding Salary}" Header="Salary"/>
+                <DataGridTextColumn Binding="{Binding Age}" Header="Age"/>
+                <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Phone Number"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskTwo" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Manager.FullName}"/>
+                <DataGridTextColumn Binding="{Binding Product.Name}"/>
+                <DataGridTextColumn Binding="{Binding Count}"/>
+                <DataGridTextColumn Binding="{Binding Sum}"/>
+                <DataGridTextColumn Binding="{Binding Date, StringFormat='HH:mm dd.MM.yyyy'}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskThree" Grid.Row="1">
+            
+        </DataGrid>
+        <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskFour" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}"/>
+                <DataGridTextColumn Header="OSB Sell Sum" Binding="{Binding OSBSum}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskFive" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}"/>
+                <DataGridTextColumn Header="Product" Binding="{Binding Product.Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskSix" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Cost" Binding="{Binding Cost}"/>
+                <DataGridTextColumn Header="Volume" Binding="{Binding Volume}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskSeven" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Manager.FullName}"/>
+                <DataGridTextColumn Binding="{Binding Product.Name}"/>
+                <DataGridTextColumn Binding="{Binding Count}"/>
+                <DataGridTextColumn Binding="{Binding Sum}"/>
+                <DataGridTextColumn Binding="{Binding Date, StringFormat='HH:mm dd.MM.yyyy'}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskEight" Grid.Row="1">
+
+        </DataGrid>
+        
+        <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2">
+            <Button x:Name="BTaskOne" Click="BTaskOne_Click" Content="Task 1" Margin="5" ToolTip="Вывести менеджеров у которых имеется номер телефона"/>
+            <Button x:Name="BTaskTwo" Click="BTaskTwo_Click" Content="Task 2" Margin="5" ToolTip="Вывести количество продаж за 20 июня 2021 года"/>
+            <Button x:Name="BTaskThree" Click="BTaskThree_Click" Content="Task 3" Margin="5" ToolTip="Вывести среднюю сумму продажи с товаром Фанера"/>
+            <Button x:Name="BTaskFour" Click="BTaskFour_Click" Content="Task 4" Margin="5" ToolTip="Вывести фамилии менеджеров и общую сумму продаж для каждого с товаром ОСБ"/>
+            <Button x:Name="BTaskFive" Click="BTaskFive_Click" Content="Task 5" Margin="5" ToolTip="Вывести менеджера и товар, который продали 22 августа 2021"/>
+            <Button x:Name="BTaskSix" Click="BTaskSix_Click" Content="Task 6" Margin="5" ToolTip="Вывести историю продаж товаров, группируя по месяцу продажи и наименованию товара"/>
+            <Button x:Name="BTaskSeven" Click="BTaskSeven_Click" Content="Task 7" Margin="5" ToolTip="Вывести историю продаж товаров, группируя по месяцу продажи и наименованию товара"/>
+        </WrapPanel>
+    </Grid>
+</Page>

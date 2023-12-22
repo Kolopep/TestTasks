@@ -29,11 +29,11 @@
         </DataGrid>
         <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskTwo" Grid.Row="1">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Manager.FullName}"/>
-                <DataGridTextColumn Binding="{Binding Product.Name}"/>
-                <DataGridTextColumn Binding="{Binding Count}"/>
-                <DataGridTextColumn Binding="{Binding Sum}"/>
-                <DataGridTextColumn Binding="{Binding Date, StringFormat='HH:mm dd.MM.yyyy'}"/>
+                <DataGridTextColumn Header="Full Name" Binding="{Binding Manager.FullName}"/>
+                <DataGridTextColumn Header="Product Name" Binding="{Binding Product.Name}"/>
+                <DataGridTextColumn Header="Count" Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="Sum" Binding="{Binding Sum}"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat='HH:mm dd.MM.yyyy'}"/>
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskThree" Grid.Row="1">
@@ -47,7 +47,7 @@
         </DataGrid>
         <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskFive" Grid.Row="1">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}"/>
+                <DataGridTextColumn Header="Full Name" Binding="{Binding Manager.FullName}"/>
                 <DataGridTextColumn Header="Product" Binding="{Binding Product.Name}"/>
             </DataGrid.Columns>
         </DataGrid>
@@ -60,11 +60,11 @@
         </DataGrid>
         <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskSeven" Grid.Row="1">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Manager.FullName}"/>
-                <DataGridTextColumn Binding="{Binding Product.Name}"/>
-                <DataGridTextColumn Binding="{Binding Count}"/>
-                <DataGridTextColumn Binding="{Binding Sum}"/>
-                <DataGridTextColumn Binding="{Binding Date, StringFormat='HH:mm dd.MM.yyyy'}"/>
+                <DataGridTextColumn Header="Full Name" Binding="{Binding Manager.FullName}"/>
+                <DataGridTextColumn Header="Product Name" Binding="{Binding Product.Name}"/>
+                <DataGridTextColumn Header="Count" Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="Sum" Binding="{Binding Sum}"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat='HH:mm dd.MM.yyyy'}"/>
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid Visibility="Collapsed" AutoGenerateColumns="False" CanUserAddRows="False" Margin="5" x:Name="DPTaskEight" Grid.Row="1">
